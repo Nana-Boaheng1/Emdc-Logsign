@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'MuseoModerno', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'MuseoModerno', cursive;
+}
+
+header{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    padding: 30px 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+}
+
+.navbar a{
+    position: relative;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 45px;
+}    
+
+.navbar a::after{
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    border-radius: 8px;
+    transition: all ease .45s;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+.btnLogin-popup{
+    display: inline-block;
+    padding: 8px 32px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 45px;
+    cursor: pointer;
+    transition: all ease .45s;
+}
+.btnLogin-popup:hover{
+    transform: scale(1.1);
+    background: #fff;
+    border: 2px solid #fff;
+    color: #162928;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    min-width: 100vh;
+    font-family: 'MuseoModerno', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/Images/maserati_ghibli_nerissimo_black_edition_2018-wallpaper-1366x768.jpg);
+    background-size: cover;
+}
+
+.container{
+    position: relative;
+    height: 530px;
+    width: 460px;
+    background: transparent;
+    border-radius: 24px;
+    border: 3px solid rgba(257, 257, 257, .4);
+    backdrop-filter: blur(25px);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 200px;
+    transition: all ease .35s;
+}
+
+.main-box{
+    padding: 50px;
+    width: 100%;
+}
+
+.main-box h1 {
+    color: #f4f7f6;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.input-box{
+    position: relative;
+    height: 52px;
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    margin: 32px 0;
+}
+
+.input-box label{
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all ease .45s;
+}
+
+.input-box input{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 30px 0 6px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 9px;
+    font-size: 19px;
+    color: #fff;
+    line-height: 55px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -3px;
+} 
+
+.check{
+    font-size: 15px;
+    font-weight: 500;
+    color: #f4f7f6;
+    margin: -14px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.check label input{
+    margin-right: 5px;
+    accent-color: #8a8585;
+}
+
+.check a{
+    color: #8a8585;
+}
+
+.check a:hover{
+    text-decoration: underline;
+}
+
+.main-btn{
+    background: #8a8585;
+    width: 100%;
+    height: 43px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #f4f7f6;
+}
+
+.main-btn:hover{
+    transform: scale(1.1);
+    background: transparent;
+    transition: ease-in-out .45s;
+    transform-style: inherit;
+    border: 2px solid #fff;
+}
+
+.sign-up{
+    text-align: center;
+    color: #f4f7f6;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.sign-up p a{
+    font-weight: 600;
+    color: #8a8585;
+}
+
+.sign-up p a:hover{
+    text-decoration: underline;
+}
+
+.close-icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    background-color: #8a8585;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    z-index: 1;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+
+.container .main-box.login{
+    transition: transform .20s ease;
+    transform: translateX(0);
+}
+
+.container .main-box.Sign-Up{
+    position: absolute;
+    transform: translateX(500px);
+    transition: none;
+}
+
+.container.active{
+    height: 570px;
+}
+
+.container.active .main-box.login{
+    transition: none;
+    transform: translateX(-500px);
+}
+
+.container.active .main-box.Sign-Up{
+    transition: transform .20s ease;
+    transform: translateX(0);
+}
+
+.container{
+    transform: scale(0);
+}
+
+.container.active-popup{
+    transform: scale(1);
+}
+
+/* Responsive Styles for Smaller Screens */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .navbar {
+        margin: 10px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 90%;
+        margin-top: 80px;
+    }
+
+    .main-box {
+        padding: 20px;
+    }
+
+    .input-box label,
+    .input-box input {
+        font-size: 15px;
+    }
+
+    .check {
+        font-size: 14px;
+    }
+}
